@@ -1,0 +1,152 @@
+#background g {
+
+    animation: pulse 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+
+
+    /* Necessary to keep the SVG objects in place while scaling */
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+@keyframes pulse {
+  /* Rotating it along with the scale makes it a little bit more fancy */
+  0%, 100% { transform: scale(0) rotate(33deg); }
+  35%, 65% { transform: scale(1) rotate(0deg); }
+}
+.cover_picture {
+  background: black;
+  /* width: 100%;
+  height: 100%; */
+}
+
+h1 {
+  font-size: 6em;
+  font-family: 'Staatliches', cursive;
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  font-family: 'Special Elite', cursive;
+  font-size: 2.2em;
+  text-align: center;
+  color: white;
+}
+
+.picture_and_title {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  width: 98.3vw;
+  height:100vh;
+  margin: 0;
+}
+
+.cover_picture, #background {
+  grid-column: 1/2;
+  height: 100%;
+  width: auto;
+}
+.title{
+  grid-column: 2/3;
+  justify-content: center;
+  align-self: center;
+  margin-right: 4vw;
+}
+
+.axis line{
+    stroke: #706f6f;
+    stroke-width: 0.5;
+    shape-rendering: crispEdges;
+ }
+
+/* axis contour */
+.axis path {
+stroke: #706f6f;
+stroke-width: 0.7;
+shape-rendering: crispEdges;
+}
+
+/* axis text */
+.axis text {
+fill: #2b2929;
+font-family: Georgia;
+font-size: 200%;
+}
+
+/* LINE CHART */
+path.line-0 {
+fill: none;
+stroke: #00565f;
+}
+
+path.line-1 {
+fill: none;
+stroke: #be1e2d;
+/* stroke-dasharray: 2; */
+}
+
+path.line-2 {
+fill: none;
+stroke: #8cac1d;
+/* stroke-dasharray: 6; */
+}
+
+/* path.line-3 {
+fill: none;
+stroke: blue;
+stroke-dasharray: 6;
+} */
+
+.serie_labelViz, .serie_labelKodansha, .serie_labelYen {
+fill: #2b2929;
+font-family: Georgia;
+font-size: 130%;
+}
+.coalition_text {
+  font-size: 120%
+}
+#container {
+  width: 70%;
+  margin-left: 20%
+}
+.Viz {
+  stroke: #00565f;
+}
+.Kodansha {
+  stroke: #be1e2d;
+}
+.Yen {
+  stroke: #8cac1d;
+}
+.tooltip_textViz {
+  color: #00565f;
+}
+.tooltip_textKodansha {
+  color: #be1e2d;
+}
+.tooltip_textYen {
+  color: #8cac1d;
+}
+.serie_labelViz {
+  fill: #00565f;
+}
+.serie_labelKodansha {
+  fill: #be1e2d;
+}
+.serie_labelYen {
+  fill: #8cac1d;
+}
+.grid {
+  opacity: 0.2;
+  stroke-width: 0.3;
+}
+#pictogram_scan {
+  width: 60%;
+  margin-left: 20%
+}
+#pictogram_scan text {
+  font-family: 'Permanent Marker', cursive;
+}

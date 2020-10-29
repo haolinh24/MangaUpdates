@@ -85,7 +85,7 @@ tooltip = d3
   .select("#container")
   .append("div")
   .attr("class", "tooltip")
-  .style("position", "absolute")
+  .style("position", "fixed")
   .style("background-color", "#D3D3D3")
   .style("padding", "0.5em")
   .style("display", "none");
@@ -197,8 +197,10 @@ function updateTooltipContent(idx) {
 
   tooltip
     .html("<div style='text-align: center'>" + sortingObj[0].date + "</div>")
-    .style("right", (document.body.clientWidth - d3.event.pageX -150) + "px")
-    .style("bottom", (document.body.clientHeight -  d3.event.pageY - 600) + "px")
+    // .style("right", (document.body.clientWidth - d3.event.pageX -150) + "px")
+    // .style("bottom", (document.body.clientHeight -  d3.event.pageY - 600) + "px")
+    .style("top",(event.clientY + 20) + "px")
+    .style("left",(event.clientX + 20) + "px")
     .selectAll()
     .data(sortingObj)
     .enter()
